@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index'
+   root :to => 'welcome#index'
     get '/team_register' , to: 'teams#index' ,as: 'new_team'
+    get '/teams', to: 'welcome#teams',as: 'teams'
    devise_for :users
    
 
