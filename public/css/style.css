@@ -1467,7 +1467,7 @@ body:not(.mobile) #stickynav{
 }
 /*  BLOCKQUOTE   ============================================================================= */
 blockquote {
-	padding: 80px 45px;
+	padding: 20px 45px;
 	text-align: center;
 	border-bottom: 5px solid #E7BF3A;
 }

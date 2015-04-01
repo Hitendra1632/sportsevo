@@ -7,6 +7,7 @@ Rails.application.routes.draw do
    root :to => 'welcome#index'
     get '/team_register' , to: 'teams#index' ,as: 'new_team'
     get '/teams', to: 'welcome#teams',as: 'teams'
+    get '/contact', to: 'welcome#contact', as: 'contact'
    devise_for :users
    
 
