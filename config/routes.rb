@@ -9,9 +9,9 @@ Rails.application.routes.draw do
     get '/teams', to: 'welcome#teams',as: 'teams'
     get '/contact', to: 'welcome#contact', as: 'contact'
     get '/about' , to: 'welcome#about', as:'about'
-    get '/cheif_guest', to: 'welcome#cheif_guest' as: 'cheif_guest'
-    get '/sponsors', to: 'welcome#sponsors' as: 'sponsors'
-    get '/faq', to: 'welcome#faq' as: 'faq'
+    get '/cheif_guest', to: 'welcome#cheif_guest', as: 'cheif_guest'
+    get '/sponsors', to: 'welcome#sponsors', as: 'sponsors'
+    get '/faq', to: 'welcome#faq', as: 'faq'
    devise_for :users
    
 
