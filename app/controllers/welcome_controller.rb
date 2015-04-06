@@ -9,4 +9,10 @@ class WelcomeController < ApplicationController
 	end
 	def sponsors
 	end
+	def faq
+	end
+	def team_register
+	end
+	def current_event
+	end
 end

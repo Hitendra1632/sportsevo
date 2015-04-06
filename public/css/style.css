@@ -1845,6 +1845,55 @@ button:active {
 .item-img-news  {
 	margin-bottom: 30px;
 }
+/*Player Information box */
+
+.register-box-orange
+{
+	margin-top:10px;
+	border-top:5px solid #E7BF3A;		
+}
+
+.register-box-blue
+{
+	margin-top:10px;
+	border-top:5px solid #2c2f36;	
+}
+.register-title
+{
+	padding:10px 10px;
+}
+	
+.bg-light-green
+{
+	background:#096;
+}
+select
+{
+	padding:10px 0;
+	width:100%;
+	text-align:center;
+	font-size:13px;
+	font-family:Arial, sans-serif;
+	margin-bottom:20px;
+	border:none;	
+}
+
+input {
+  	width: 97%;
+  	padding: 10px 0;
+  	font-size: 13px;
+  	font-family: Arial, sans-serif;
+  	border: none;
+  	margin-bottom: 20px;
+	padding-left:10px;
+}
+
+.register-inside
+{
+	padding: 10px 45px;
+	color: #fff;
+}
+
 
 /*  SOON  ==================================================================== */
 
