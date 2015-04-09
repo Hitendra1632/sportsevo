@@ -6,7 +6,8 @@
                 	<h1 style="text-align:center;color:#FFF">Register Your Team</h1>
                 </div>
             </div>
-
+    <%= form_tag team_register_path ,:method => :get do %>
+    <fieldset>
         <div class="m-12">
         
 			<div class="register-title">
@@ -30,16 +31,7 @@
                         </select></td>
                         <td></td>
 						</tr>	
-                </table>        
-		</div>
-		</div>
-        
-        <div class="m-12">
-        
-           	
-			<div class="register-title">
-
-				<table class="table-scores">
+           				<tr ><td style="background-color:transparent"></td></tr>
 						<tr class="t-header">
 							<td>Captain Name</td>
 							<td>Captain Email</td>
@@ -48,7 +40,7 @@
 						</tr>			
 
 						<tr>
-							<td><input type="text" class="form-control" placeholder="Enter Captain Name"></td>
+							<td><input type="text" name="captian_name" class="form-control" placeholder="Enter Captain Name"></td>
 							<td><input type="text" class="form-control" placeholder="Enter Captain Email"></td>
 							<td><input type="text" class="form-control" placeholder="Enter Captain Mobile No"></td>
 						    <td></td>
@@ -158,8 +150,10 @@
 
 			</div>	<!-- Module Content -->	
             <center>
-                    	<a href="/team_register" class="submit-button green-bg" style="width:10%;margin-bottom:50px;">Submit</a>
+            	<div class="button green-bg" style="width:10%;margin-bottom:50px;">More</div>
+                    	
             </center>    
 		</div>
-			
+		</fieldset>
+	<%end%>
 	</section>

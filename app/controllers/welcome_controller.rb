@@ -12,6 +12,7 @@ class WelcomeController < ApplicationController
 	def faq
 	end
 	def team_register
+		fail
 	end
 	def current_event
 	end

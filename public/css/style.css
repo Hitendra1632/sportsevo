@@ -448,6 +448,8 @@ div .active a {
 }
 select
 {
+	background-color: #B6B6B6;
+	color:#060606;
 	padding:10px 0;
 	width:100%;
 	text-align:center;
@@ -459,6 +461,8 @@ select
 }
 
 input {
+	background-color: #A1A19B;
+	color:#060606;
   	width: 97%;
   	padding: 10px 0;
   	font-size: 13px;
