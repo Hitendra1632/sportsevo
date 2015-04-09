@@ -463,6 +463,7 @@ select
 input {
 	background-color: #A1A19B;
 	color:#060606;
+	/*color:white;*/
   	width: 97%;
   	padding: 10px 0;
   	font-size: 13px;

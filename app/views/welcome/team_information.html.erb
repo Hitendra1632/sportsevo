@@ -4,7 +4,7 @@
 			<div class="module-content">
 
 				<div class="title-default">
-					<h2><b>Team Name</b></h2>	
+					<h2><b>Team </b></h2>	
 				</div>	<!-- Module Title -->
 
 				<table class="table-scores">
@@ -21,9 +21,9 @@
 							
 						</tr>
 						<tr>							
-							<td>Youth Club</td>
-							<td>yellow</td>
-							<td>Mathura</td>					
+							<td><%=@team_info.name%></td>
+							<td><%=@team_info.color%></td>
+							<td><%=@team_info.place%></td>					
 							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
 						</tr>
 			    		<tr ><td style="background-color:transparent"></td></tr>																								
@@ -41,9 +41,9 @@
 							
 						</tr>
 						<tr>							
-							<td>Hitendra Kumar</td>
-							<td>hitendra1632@gmail.com</td>
-							<td>8695398008</td>					
+							<td><%=@captian_info.name%></td>
+							<td><%=@captian_info.email%></td>
+							<td><%=@captian_info.phoneno%></td>					
 							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
 						</tr>	
 
@@ -60,12 +60,14 @@
 							<td></td>
 							
 						</tr>
+					<%@player_info.each do |player|%>
 						<tr>							
-							<td>Hitendra Kumar</td>
-							<td >hitendra1632@gmail.com</td>
+							<td><%=player.name%></td>
+							<td><%=player.phoneno%></td>
 							<td></td>					
 							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
-						</tr>																											
+						</tr>
+					<%end%>																											
 				</table> <!-- Table Scores -->
 				
 
