@@ -7,12 +7,14 @@ Rails.application.routes.draw do
    root :to => 'welcome#index'
     #get '/team_register' , to: 'teams#index' ,as: 'new_team'
     get '/teams', to: 'welcome#teams',as: 'teams'
+    get '/tmp' , to: 'welcome#tmp' ,as: 'tmp'
+    get '/team_information', to: 'welcome#team_information', as:'team_information' 
     get '/contact', to: 'welcome#contact', as: 'contact'
     get '/about' , to: 'welcome#about', as:'about'
     get '/cheif_guest', to: 'welcome#cheif_guest', as: 'cheif_guest'
     get '/sponsors', to: 'welcome#sponsors', as: 'sponsors'
     get '/faq', to: 'welcome#faq', as: 'faq'
-    get '/team_register', to:'welcome#team_register', as: 'team_register'
+    get '/team_register', to:'teams#team_register', as: 'team_register'
     get '/current_event', to:'welcome#current_event', as:'current_event'
    devise_for :users
    

@@ -15,4 +15,10 @@ class WelcomeController < ApplicationController
 	end
 	def current_event
 	end
+	def team_information
+
+	end
+	def tmp
+	end
+
 end

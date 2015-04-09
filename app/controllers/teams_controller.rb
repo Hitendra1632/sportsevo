@@ -3,4 +3,11 @@ class TeamsController < ApplicationController
 	def index
 		
 	end
+	def team_information
+		
+		
+	end
+	def team_register
+		
+	end
 end
