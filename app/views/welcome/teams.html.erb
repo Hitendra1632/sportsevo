@@ -3,50 +3,31 @@
           <div class="title-default">
                                 <h2>Teams</h2>
          </div>
+         <%@teams.each do |team| %>
+                <div class="m-08 module" style="width:30%">
+                    <div class="m-06 module" style="width:100%">
+                        <div class="module-content">
+                        <div class="module-blockquot bg-grey">    
+                            <div class="title-default">
+                                <h2>team.name</h2>  
+                            </div>                      
+                            
+                                <blockquote > 
+                                    <i class="fa fa-flag" style="color:<%=team.color%>"></i>
+                                    <p>Caption Name: <%=team["captian_name"]%></br>
+                                        Place: <%=team.place%>
+                                        </p>
+                                    <a href='/team_information' %>
+                                    <div class="button green-bg">More</div>
+                                    </a>
+                                </blockquote>   
+                            </div>
+                        </div> 
 
-        <div class="m-08 module" style="width:30%">
-            <div class="m-06 module" style="width:100%">
-                <div class="module-content">
-                <div class="module-blockquot bg-grey">    
-                    <div class="title-default">
-                        <h2>Youth Club</h2>  
-                    </div>                      
-                    
-                        <blockquote > 
-                            <i class="fa fa-flag" style="color:green"></i>
-                            <p>Caption Name: Hitendra Kumar </br>
-                                Place:Mathura
-                                </p>
-                            <a href='/team_information' %>
-                            <div class="button green-bg">More</div>
-                            </a>
-                        </blockquote>   
-                    </div>
-                </div> 
-
-             </div>
-        </div>
-        <div class="m-08 module">
-            <div class="m-06 module">
-                <div class="module-content">
-                <div class="module-blockquot bg-grey">    
-                    <div class="title-default">
-                        <h2>Youth Club</h2>  
-                    </div>                      
-                    
-                        <blockquote > 
-                            <i class="fa fa-flag" style="color:green"></i>
-                            <p>Caption Name: Hitendra Kumar </br>
-                                Place:Mathura
-                                </p>
-                            <div class="button green-bg">More</div>
-                        </blockquote>   
-                    </div>
-                </div> 
-
-             </div>
-        </div>
-
+                     </div>
+                </div>
+   
+        <%end%>
        
     </section>
                     

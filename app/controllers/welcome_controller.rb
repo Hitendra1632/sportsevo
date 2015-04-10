@@ -11,8 +11,16 @@ class WelcomeController < ApplicationController
 	end
 	def faq
 	end
+	def teams 
+		@teams=Team.all
+		@teams=@teams.to_a
+		@teams.each do |team|
+			team[:captian_name]=Player.where("id" => team.captian_id).pluck("name")
+		end
+
+	end
 	def team_register
-		fail
+		
 	end
 	def current_event
 	end

@@ -8,13 +8,14 @@ class TeamsController < ApplicationController
 		
 	end
 	def team_register
-		team_already_register=Team.where("registered_email" => current_user.email)
-	    if  !team_already_register
-			@team_color=["Red","Yellow","Black","Gray","Red","Orange"]
+		@team_color=["Red","Yellow","Black","Gray","Red","Orange"]
+		#team_already_register=Team.where("registered_email" => current_user.email)
+	    #if  !team_already_register
+			fail
 			if params[:team_name].present?
 				team_info=Team.new
 				team_info.name=params[:team_name]
-				team_info.color=params[:color]
+				team_info.color=params[:team_color]
 				team_info.place=params[:team_place]
 				team_info.registered_email=current_user.email
 				team_info.created_at=Time.now.to_i
@@ -40,7 +41,7 @@ class TeamsController < ApplicationController
 					player_info.save
 				end
 				team_info.save
-			end
+			#end
 			redirect_to :controller => 'welcome', :action => 'team_information', :id => team_info.team_id
 		end
 	end

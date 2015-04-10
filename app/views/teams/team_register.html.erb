@@ -25,7 +25,7 @@
 							</td>
 							<td><%= text_field_tag :team_place ,params[:team_place],:placeholder => "Place",:class => "form-control" %>
 							</td>
-							<td><%= select_tag "team_color", options_for_select(@team_color), :prompt => 'Choose your team color' %> </br></td>
+							<td><%=select_tag "team_color", options_for_select(@team_color), :prompt => 'Choose your team color' %> </br></td>
                         <td></td>
 						</tr>	
            				<tr ><td style="background-color:transparent"></td></tr>
