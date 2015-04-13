@@ -10,7 +10,7 @@
 				<table class="table-scores">
 						<tr class="t-header">
 							<td colspan="3" class="score-date"><b>Team</b> </td>
-							<td title="Captian" ><a href="#"><i class="fa fa-flag"></i></a></td>
+							<td title="Team" ><a href="#"><i class="fa fa-flag"></i></a></td>
 						</tr>
 
 						<tr class="t-header">
@@ -20,8 +20,9 @@
 							<td></td>
 							
 						</tr>
-						<tr>							
-							<td><%=@team_info.name%></td>
+						<tr>
+							<td title="Player"  ><a href="#"><i class="fa fa-trophy" style="float:left"></i></a>							
+							<%=@team_info.name%></td>
 							<td><%=@team_info.color%></td>
 							<td><%=@team_info.place%></td>					
 							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
@@ -40,8 +41,9 @@
 							<td></td>
 							
 						</tr>
-						<tr>							
-							<td><%=@captian_info.name%></td>
+						<tr>	
+							<td title="Player"  ><a href="#"><i class="fa fa-thumbs-up" style="float:left"></i></a>						
+							<%=@captian_info.name%></td>
 							<td><%=@captian_info.email%></td>
 							<td><%=@captian_info.phoneno%></td>					
 							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
@@ -61,10 +63,11 @@
 							
 						</tr>
 					<%@player_info.each do |player|%>
-						<tr>							
-							<td><%=player.name%></td>
+						<tr>
+							<td title="Player"  ><a href="#"><i class="fa fa-user" style="float:left"></i></a>							
+							<%=player.name%></td>
 							<td><%=player.phoneno%></td>
-							<td></td>					
+							<td></td>				
 							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
 						</tr>
 					<%end%>																											

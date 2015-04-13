@@ -43,6 +43,9 @@ class TeamsController < ApplicationController
 				team_info.save
 			end
 			redirect_to :controller => 'welcome', :action => 'team_information', :id => team_info.team_id
+		 else
+		 	flash[:notice]="You already register your team.Thanks you for registing your team."
+  		    @message =true
 		end
 	end
 end

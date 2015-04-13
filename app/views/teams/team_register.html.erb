@@ -1,5 +1,23 @@
-<section class="bg-dark-blue">	
+	<%if @message ==true %>
+			<div class="m-12" style="Background-color:#2C2F36">
+			
+		                <div class="alert alert-error">
+								<i class="fa fa-times"></i>
+							    <ul>
+							    	<li>You already register your team.</li>
+							    	<li>Thanks you for registing your team.</li>
+							    </ul>
+							    <div class="close">
+									<i class="fa fa-times"></i>
+								</div>
+			 			</div>
+			 	
+			 </div>
+		
+	<%end%>
 
+<section class="bg-dark-blue">	
+	      
 		
         	<div class="register-title">
             	<div class="title-default">
@@ -45,7 +63,7 @@
 						    <td></td>
 						</tr>	
                 </table>        
-		</div>
+			</div>
 		</div>
 		<div class="m-12">
         
@@ -177,10 +195,13 @@
 
 			</div>	<!-- Module Content -->	
             <center>
-            	<div ><%= submit_tag "Submit" ,:name => nil,:class=>"button green-bg",:style=>"width:10%;margin-bottom:50px;" %></div>
+            	<div ><%= submit_tag "Submit" ,:name => nil,:class=>"button green-bg" %></div>
                     	
             </center>    
 		</div>
 		</fieldset>
-	<%end%>
-	</section>
+		<%end%>
+	
+
+	
+</section>
