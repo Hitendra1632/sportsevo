@@ -9,8 +9,8 @@ class TeamsController < ApplicationController
 	end
 	def team_register
 		@team_color=["Red","Yellow","Black","Gray","Red","Orange"]
-		team_already_register=Team.where("registered_email" => current_user.email)
-	    if  !team_already_register
+		team_already_register=Team.where("registered_email" => current_user.email).first
+	    if  !team_already_register.present?
 			
 			if params[:team_name].present?
 				team_info=Team.new
@@ -41,8 +41,9 @@ class TeamsController < ApplicationController
 					player_info.save
 				end
 				team_info.save
+				redirect_to :controller => 'welcome', :action => 'team_information', :id => team_info.team_id
 			end
-			redirect_to :controller => 'welcome', :action => 'team_information', :id => team_info.team_id
+			
 		 else
 		 	flash[:notice]="You already register your team.Thanks you for registing your team."
   		    @message =true
