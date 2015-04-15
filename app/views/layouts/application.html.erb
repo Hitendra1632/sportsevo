@@ -54,12 +54,17 @@
                 </li>
                 <li><a href="/teams">Teams</a>  
                 </li>
-                <li><a href="/team_register">Register</a>
-                    <ul>
-                        <li><a href="/team_register">Team</a></li>
-                        <li><a href="/">As a Volunteer</a></li>             
-                    </ul>               
-                </li>
+                <%team_id=team_registered%>
+                <%if team_id.present? %> 
+                     <li><a href="/team_information" id=<%=team_id%>>My Team</a></li>
+                 <%else%>
+                    <li><a href="/team_register">Register</a>
+                        <ul>
+                            <li><a href="/team_register">Team</a></li>
+                            <li><a href="/">As a Volunteer</a></li>             
+                        </ul>               
+                    </li>
+                <%end%>
                 <li><a href="contact">Contact</a></li>
                 <% if user_signed_in? %> 
              
@@ -85,12 +90,18 @@
                     </ul>               
                 </li>
                 <li><a href="/teams">Teams</a></li>
-                <li><div>Register<i class="fa fa-chevron-right"></i></div>
-                    <ul>
-                        <li><a href="/team_register">Team</a></li>
-                        <li><a href="/">As a Volunteer</a></li>
-                    </ul>   
-                </li>
+                <%team_id=team_registered%>
+                <%if team_id.present? %> 
+                     <li><a href="/team_information?id=<%=team_id%>">My Team</a></li>
+                 <%else%>
+                    <li><div>Register<i class="fa fa-chevron-right"></i></div>
+                         <ul>
+                            <li><a href="/team_register">Team</a></li>
+                            <li><a href="/">As a Volunteer</a></li>
+                        </ul>   
+                    </li>
+                <%end%>
+            
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/users/sign_in">Login</a></li>
             </ul>   

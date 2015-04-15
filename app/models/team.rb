@@ -7,4 +7,6 @@ class Team
   field :registered_email,type: String
   field :captian_id ,type: String
   field :created_at, type: Integer ,:default => Time.now.to_i
+  field :fee, type:Boolean ,:default => false
+
 end

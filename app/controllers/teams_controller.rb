@@ -49,4 +49,6 @@ class TeamsController < ApplicationController
   		    @message =true
 		end
 	end
+	
+     
 end
