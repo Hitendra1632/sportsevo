@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     #get '/team_register' , to: 'teams#index' ,as: 'new_team'
     get '/teams', to: 'welcome#teams',as: 'teams'
     get '/tmp' , to: 'welcome#tmp' ,as: 'tmp'
-    get '/team_information', to: 'welcome#team_information', as:'team_information' 
+    get '/team_information/:id', to: 'welcome#team_information', as:'team_information' 
     get '/contact', to: 'welcome#contact', as: 'contact'
     get '/about' , to: 'welcome#about', as:'about'
     get '/cheif_guest', to: 'welcome#cheif_guest', as: 'cheif_guest'

@@ -56,7 +56,7 @@
                 </li>
                 <%team_id=team_registered%>
                 <%if team_id.present? %> 
-                     <li><a href="/team_information" id=<%=team_id%>>My Team</a></li>
+                     <li><%=link_to "My Team",team_information_path(team_id)%></li>
                  <%else%>
                     <li><a href="/team_register">Register</a>
                         <ul>

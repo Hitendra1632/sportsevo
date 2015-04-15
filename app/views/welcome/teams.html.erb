@@ -18,7 +18,7 @@
                                     <p>Caption Name: <%=team["captian_name"].first%></br>
                                         Place: <%=team.place%>
                                         </p>
-                                    <%= link_to (url_for({:controller => "welcome", :action => "team_information", :id => team.id})) do %>
+                                    <%= link_to team_information_path(team.id) do %>
                                       <div class="button green-bg">More</div>
                                     <%end%>
                                 </blockquote>   

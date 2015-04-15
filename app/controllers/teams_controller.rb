@@ -41,12 +41,13 @@ class TeamsController < ApplicationController
 					player_info.save
 				end
 				team_info.save
-				redirect_to :controller => 'welcome', :action => 'team_information', :id => team_info.team_id
-			end
+				redirect_to team_information_path(team_info.id)
+			end	
 			
 		 else
-		 	flash[:notice]="You already register your team.Thanks you for registing your team."
-  		    @message =true
+		 	#flash[:notice]="You already register your team.Thanks you for registing your team."
+  		    #@message =true
+  		    redirect_to team_information_path(team_already_register.id)
 		end
 	end
 	
