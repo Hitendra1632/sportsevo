@@ -3627,7 +3627,7 @@ jQuery.fn.extend({
 	},
 	off: function( types, selector, fn ) {
 		var handleObj, type;
-		if ( types && types.preventDefault && types.handleObj ) {
+		if ( types && types.getpreventDefault && types.handleObj ) {
 			// ( event )  dispatched jQuery.Event
 			handleObj = types.handleObj;
 			jQuery( types.delegateTarget ).off(
