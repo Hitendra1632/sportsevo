@@ -26,9 +26,13 @@ class WelcomeController < ApplicationController
 	def current_event
 	end
 	def team_information
-		@team_info=Team.where("team_id" => params[:id]).first
-		@captian_info=Player.where("id" => @team_info.captian_id).first
-		@player_info=Player.where("team_id" => params[:id])
+		team_already_register=Team.where("registered_email" => current_user.email).first
+		if team_already_register.present?
+			team_admin=true
+		end	
+			@team_info=Team.where("team_id" => params[:id]).first
+			@captian_info=Player.where("id" => @team_info.captian_id).first
+			@player_info=Player.where("team_id" => params[:id])
 	end
 	def tmp
 	end
