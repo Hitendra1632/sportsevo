@@ -2,6 +2,8 @@ class WelcomeController < ApplicationController
 	def index
 	
 	end
+	def organizers
+	end
 	def contact
 	end
 	def about
@@ -26,10 +28,14 @@ class WelcomeController < ApplicationController
 	def current_event
 	end
 	def team_information
-		team_already_register=Team.where("registered_email" => current_user.email).first
-		if team_already_register.present?
-			team_admin=true
+	  if user_signed_in?
+		@team_already_register=Team.where("registered_email" => current_user.email).first
+		if @team_already_register.present?
+			@team_already_register
+		 else
+		 	@team_already_register=""
 		end	
+	  end
 			@team_info=Team.where("team_id" => params[:id]).first
 			@captian_info=Player.where("id" => @team_info.captian_id).first
 			@player_info=Player.where("team_id" => params[:id])

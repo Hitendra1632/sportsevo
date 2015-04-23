@@ -7,6 +7,7 @@ Rails.application.routes.draw do
    root :to => 'welcome#index'
     #get '/team_register' , to: 'teams#index' ,as: 'new_team'
     get '/teams', to: 'welcome#teams',as: 'teams'
+    get '/organizers', to: 'welcome#organizers',as: 'organizers'
     get '/tmp' , to: 'welcome#tmp' ,as: 'tmp'
     get '/team_information/:id', to: 'welcome#team_information', as:'team_information' 
     get '/contact', to: 'welcome#contact', as: 'contact'

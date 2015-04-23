@@ -93,7 +93,7 @@ section:after { clear: both; content: ""; display: block; height: 0; }
 }
 .bg-05 {
 	height: 100%;
-	background: #fff url('../img/bg-05.jpg') left top no-repeat;
+	/*background: #fff url('../img/bg-05.jpg') left top no-repeat;*/
 	background-size: cover;
 }
 .bg-06 {
