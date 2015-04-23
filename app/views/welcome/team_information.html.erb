@@ -50,9 +50,9 @@
 						</tr>
 						<tr>	
 							<td title="Player"  ><a href="#"><i class="fa fa-thumbs-up" style="float:left"></i></a>						
-							<%=@captian_info.name%></td>
-							<td><%=@captian_info.email%></td>
-							<td><%=@captian_info.phoneno%></td>
+							<%=@captain_info.name%></td>
+							<td><%=@captain_info.email%></td>
+							<td><%=@captain_info.phoneno%></td>
 						  <%if  @team_already_register.present? and @team_already_register.team_id==@team_info.team_id%>					
 							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
 						  <%else%>
@@ -108,7 +108,7 @@
     <!-- Include js plugin -->
     <script src="owl-carousel/owl.carousel.js"></script>
     <script src="../js/countdown.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../js/lightbox.js" type="text/javascript" charset="utf-8"></script> 
+   
 <script type="application/javascript">
 	$(document).ready(function(e) {
        	$("#edit").click(function(e)

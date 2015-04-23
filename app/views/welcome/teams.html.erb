@@ -4,8 +4,8 @@
                                 <h2>Teams</h2>
          </div>
          <%@teams.each do |team| %>
-                <div class="m-08 module" style="width:30%">
-                    <div class="m-06 module" style="width:100%">
+                <div class="m-04 module">
+                    <div class="m-12 module" >
                         <div class="module-content">
                         <div class="module-blockquot bg-grey">    
                             <div class="title-default">
@@ -15,7 +15,7 @@
                             
                                 <blockquote style=""> 
                                     <i class="fa fa-flag" style="color:<%=team.color%>"></i>
-                                    <b><p>Captain Name: <%=team["captian_name"].first%></br>
+                                    <b><p>Captain Name: <%=team["captain_name"].first%></br>
                                         Place: <%=team.place%></b>
                                         </p>
                                     <%= link_to team_information_path(team.id) do %>

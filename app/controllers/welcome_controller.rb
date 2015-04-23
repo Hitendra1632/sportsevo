@@ -18,7 +18,7 @@ class WelcomeController < ApplicationController
 		@teams=Team.all
 		@teams=@teams.to_a
 		@teams.each do |team|
-			team[:captian_name]=Player.where("id" => team.captian_id).pluck("name")
+			team[:captain_name]=Player.where("id" => team.captain_id).pluck("name")
 		end
 
 	end
@@ -37,7 +37,7 @@ class WelcomeController < ApplicationController
 		end	
 	  end
 			@team_info=Team.where("team_id" => params[:id]).first
-			@captian_info=Player.where("id" => @team_info.captian_id).first
+			@captain_info=Player.where("id" => @team_info.captain_id).first
 			@player_info=Player.where("team_id" => params[:id])
 	end
 	def tmp

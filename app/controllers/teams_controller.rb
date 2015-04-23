@@ -20,14 +20,14 @@ class TeamsController < ApplicationController
 				team_info.registered_email=current_user.email
 				team_info.created_at=Time.now.to_i
 				team_info.team_id=team_info.id.to_s
-				captian_info=Player.new
-				team_info.captian_id=captian_info.id
-				captian_info.name=params[:captian_name]
-				captian_info.team_id=team_info.id.to_s
-				captian_info.phoneno=params[:captian_phoneno]
-				captian_info.email=params[:captian_email]
-				captian_info.designation="captian"
-				captian_info.save
+				captain_info=Player.new
+				team_info.captain_id=captain_info.id
+				captain_info.name=params[:captain_name]
+				captain_info.team_id=team_info.id.to_s
+				captain_info.phoneno=params[:captain_phoneno]
+				captain_info.email=params[:captain_email]
+				captain_info.designation="captain"
+				captain_info.save
 				for i in 1..14
 					player_name="player"+i.to_s+"_name"
 					player_name=player_name.to_sym
