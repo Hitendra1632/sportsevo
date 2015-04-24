@@ -28,7 +28,7 @@ body h1 {
   margin:0 auto;
     text-align: center;
     background: #323542;
-      padding:4em;
+      padding:1em;
 }
 .location {
   padding: 1em 0;
@@ -50,7 +50,7 @@ form {
 /*-----*/
 .location img {
   margin: 2em 0;
-  float: center;
+  text-align: center;
 }
 .app-location input[type="text"],.app-location input[type="password"]{
   width: 81.2%;
@@ -177,9 +177,9 @@ body h1 {
   font-size: 2.4em;
   }
   .location img {
-  margin: 2em 0;
+  margin: 1em 0;
   width: 59%;
-  float: center;
+  text-align: center;
 }
 .app-location h2 {
   padding: 0.8em 0;
@@ -286,8 +286,7 @@ body h1 {
 </style>
 <h1>Welcome to Mathura's first Football Championship</h1>
     <div class="app-location">
-      <div class="line"><span></span></div>
-      <div class="location"><img src="../img/logo.png" class="img-responsive" alt="" /></div>
+      <div class="location"><center><img src="../img/logo.png" class="img-responsive" alt="" /></center></div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.email_field :email, autofocus: true,:type=>"text",:class =>"text",:value=>"E-mail address",:onfocus=>"this.value = '';",:onblur=>"if (this.value == '') {this.value = 'E-mail address';}" %>
         <%= f.password_field :password, autocomplete: "off",:type=>"password",:value=>"Password",:onfocus=>"this.value = '';",:onblur=>"if (this.value == '') {this.value = 'Password';}"%>
@@ -301,13 +300,12 @@ body h1 {
         </div>
         <div class="clear"></div>
         <div class="new">
-          <h3><%= render "devise/shared/links" %></h3>
           <h3><a href="#">Forgot password ?</a></h3>
           <h4><a href="#">New here ? Sign Up</a></h4>
           <div class="clear"></div>
         </div>
       <% end %>
-    </div>
+    </div></br>
   <!--start-copyright-->
       
   
@@ -319,8 +317,8 @@ body h1 {
 
 
 
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/lightbox.css">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -336,4 +334,5 @@ body h1 {
     <script src="owl-carousel/owl.carousel.js"></script>
     <script src="js/countdown.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/lightbox.js" type="text/javascript" charset="utf-8"></script>
+
 
