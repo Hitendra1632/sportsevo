@@ -294,13 +294,12 @@ body h1 {
           <%= f.submit "Log in",:type=>"submit",:onclick=>"myFunction()", :value=>"Sign in" %></div>
         <div style="float:left;display:inline-block;color:#fff;">
           <% if devise_mapping.rememberable? -%>
-           <h5><%= f.check_box :remember_me %></h5>
-           <h5 style="float:left;display:inline-block;color:#fff;"><%= f.label :remember_me%></h5>
+           <h5 style="float:left;display:inline-block;color:#fff;">Remember me<%= f.check_box :remember_me %></h5>
           <%end%>
         </div>
         <div class="clear"></div>
         <div class="new">
-          <h3><a href="#">Forgot password ?</a></h3>
+          <h3><%= link_to "Forgot password?", new_password_path(:user) %></h3>
           <h4><a href="#">New here ? Sign Up</a></h4>
           <div class="clear"></div>
         </div>
