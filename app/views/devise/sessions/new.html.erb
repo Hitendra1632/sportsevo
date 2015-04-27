@@ -103,7 +103,7 @@ input[type="submit"]:hover{
   float:left;
 }
 .new h3 a,.new h4 a{
-  color:#78797C;
+  color:#fff;
   font-weight: 400;
   font-size: 1em;
 }
@@ -291,23 +291,17 @@ body h1 {
         <%= f.email_field :email, autofocus: true,:type=>"text",:class =>"text",:value=>"E-mail address",:onfocus=>"this.value = '';",:onblur=>"if (this.value == '') {this.value = 'E-mail address';}" %>
         <%= f.password_field :password, autocomplete: "off",:type=>"password",:value=>"Password",:onfocus=>"this.value = '';",:onblur=>"if (this.value == '') {this.value = 'Password';}"%>
         <div class="submit">
-          <%= f.submit "Log in",:type=>"submit",:onclick=>"myFunction()", :value=>"Sign in" %></div>
-        <div style="float:left;display:inline-block;color:#fff;">
-          <% if devise_mapping.rememberable? -%>
-           <h5 style="float:left;display:inline-block;color:#fff;">Remember me<%= f.check_box :remember_me %></h5>
-          <%end%>
-        </div>
+          <%= f.submit "Log in",:type=>"submit",:onclick=>"myFunction()", :value=>"Sign in" %></div>  
         <div class="clear"></div>
-        <div class="new">
-          <h3><%= link_to "Forgot password?", new_password_path(:user) %></h3>
-          <h4><a href="#">New here ? Sign Up</a></h4>
-          <div class="clear"></div>
+        <div class="new" style="color:#fff;">
+          <!--<h3 style="color:#fff;"><%= link_to "Forgot password?", new_password_path(:user) %></h3> -->
+          <h4><a href="/users/sign_up">New here ? Sign Up</a></h4>
         </div>
-      <% end %>
+     <% end %>
     </div></br>
   <!--start-copyright-->
       
-  
+
 
 
 

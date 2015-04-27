@@ -5,6 +5,13 @@ class WelcomeController < ApplicationController
 	def organizers
 	end
 	def contact
+	  if params[:email].present?
+		feedback_data={name: params[:name],email: params[:email],message: params[:message]
+  				}
+  	#UserMailer.delay.feedback(feedback_data)
+  		UserMailer.feedback_us(feedback_data).deliver_now
+  		redirect_to root_path
+  	  end
 	end
 	def about
 	end

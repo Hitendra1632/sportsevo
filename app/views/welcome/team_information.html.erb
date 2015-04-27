@@ -28,7 +28,7 @@
 							<td><%=@team_info.color%></td>
 							<td><%=@team_info.place%></td>
 						  <%if @team_already_register.present? and @team_already_register.team_id==@team_info.team_id%>					
-							<td title="Edit" ><a href="#"><i class="fa fa-upload"></td>
+							<td title="Edit" ><a href="#"><i class="fa fa-star"></td>
 							
 						  <%else%>
 						  	<td></td>
@@ -54,7 +54,7 @@
 							<td><%=@captain_info.email%></td>
 							<td><%=@captain_info.phoneno%></td>
 						  <%if  @team_already_register.present? and @team_already_register.team_id==@team_info.team_id%>					
-							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
+							<td title="Star" ><a href="#"><i class="fa fa-star"></i></a></td>
 						  <%else%>
 						  	<td></td>
 						  <%end%>
@@ -80,7 +80,7 @@
 							<td><%=player.phoneno%></td>
 							<td></td>
 						  <%if  @team_already_register.present? and @team_already_register.team_id==@team_info.team_id%>				
-							<td title="Edit" ><a href="#"><i class="fa fa-edit"></i></a></td>
+							<td title="Star" ><a href="#"><i class="fa fa-star"></i></a></td>
 						  <%else%>
 						  	<td></td>
 						  <%end%>
