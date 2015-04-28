@@ -11,16 +11,17 @@
         <div class="m-12">
         
 			<div class="register-title">
-	
+			<%= form_tag team_register_path ,:method => :get do %>
+    		<fieldset>
 				<table class="table-scores">
+
 						<tr class="t-header">
 							<td>Team</td>
 							<td></td>
 							<td></td>
 							<td title="Team" ><a href="#"><i class="fa fa-flag"></i></a></td>
 						</tr>			
-		 <%= form_tag team_register_path ,:method => :get do %>
-    		<fieldset>
+		 
 						<tr>
 							<td><%= text_field_tag :team_name ,params[:team_name],:placeholder => "Team name",:class => "form-control" %>
 							</td>
@@ -166,6 +167,14 @@
 						</tr>	
                         <tr>
 							<td>#15</td>
+							<td><%= text_field_tag :player14_name ,params[:player14_name],:placeholder => "player name" %>
+							</td>
+							<td><%= text_field_tag :player14_phoneno ,params[:player14_phoneno],:placeholder => "player mobile number " %>
+							</td>
+							<td></td>
+						</tr>
+						 <tr>
+							<td>#16</td>
 							<td><%= text_field_tag :player14_name ,params[:player14_name],:placeholder => "player name" %>
 							</td>
 							<td><%= text_field_tag :player14_phoneno ,params[:player14_phoneno],:placeholder => "player mobile number " %>

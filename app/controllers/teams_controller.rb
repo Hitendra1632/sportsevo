@@ -28,7 +28,7 @@ class TeamsController < ApplicationController
 				captain_info.email=params[:captain_email]
 				captain_info.designation="captain"
 				captain_info.save
-				for i in 1..14
+				for i in 1..15
 					player_name="player"+i.to_s+"_name"
 					player_name=player_name.to_sym
 					player_phoneno="player"+i.to_s+"_phoneno"
