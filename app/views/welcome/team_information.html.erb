@@ -1,0 +1,129 @@
+
+
+<section class="bg-dark-blue">
+
+		<div class="m-06" style="width:100%">
+			<div class="module-content">
+
+				<div class="title-default">
+					<h2><b>Team</b></h2>	
+				</div>	<!-- Module Title -->
+
+				<table class="table-scores">
+						<tr class="t-header">
+							<td colspan="3" class="score-date"><b>Team</b> </td>
+							<td title="Team" ><a href="#"><i class="fa fa-flag"></i></a></td>
+						</tr>
+
+						<tr class="t-header">
+							<td>Name</td>
+							<td>Color</td>
+							<td>Place</td>
+							<td></td>
+							
+						</tr>
+						<tr>
+							<td title="Player"  ><a href="#"><i class="fa fa-trophy" style="float:left"></i></a>							
+							<%=@team_info.name%></td>
+							<td><%=@team_info.color%></td>
+							<td><%=@team_info.place%></td>
+						  <%if @team_already_register.present? and @team_already_register.team_id==@team_info.team_id%>					
+							<td title="Edit" ><a href="#"><i class="fa fa-star"></td>
+							
+						  <%else%>
+						  	<td></td>
+						  <%end%>
+						</tr>
+			    		<tr ><td style="background-color:transparent"></td></tr>																								
+						
+						<tr class="t-header">
+							<td colspan="3" class="score-date"><b>Captain</b></td>
+							<td title="Captain" ><a href="#"><i class="fa fa-star"></i></a></td>
+						</tr>
+
+						<tr class="t-header">
+							<td >Name</td>
+							<td >Email</td>
+							<td>Phone Number</td>
+							<td></td>
+							
+						</tr>
+						<tr>	
+							<td title="Player"  ><a href="#"><i class="fa fa-thumbs-up" style="float:left"></i></a>						
+							<%=@captain_info.name%></td>
+							<td><%=@captain_info.email%></td>
+							<td><%=@captain_info.phoneno%></td>
+						  <%if  @team_already_register.present? and @team_already_register.team_id==@team_info.team_id%>					
+							<td title="Star" ><a href="#"><i class="fa fa-star"></i></a></td>
+						  <%else%>
+						  	<td></td>
+						  <%end%>
+						</tr>	
+
+						<tr ><td style="background-color:transparent"></td></tr>
+						<tr class="t-header">
+							<td colspan="3" class="score-date"><b>Players</b></td>
+							<td title="Players" ><a href="#"><i class="fa fa-group"></i></a></td>
+						</tr>
+
+						<tr class="t-header">
+							<td>Name</td>
+							<td>Phone No</td>
+							<td></td>
+							<td></td>
+							
+						</tr>
+					<%@player_info.each do |player|%>
+						<tr>
+							<td title="Player"><a href="#"><i class="fa fa-user" style="float:left"></i></a>							
+							<%=player.name%></td>
+							<td><%=player.phoneno%></td>
+							<td></td>
+						  <%if  @team_already_register.present? and @team_already_register.team_id==@team_info.team_id%>				
+							<td title="Star" ><a href="#"><i class="fa fa-star"></i></a></td>
+						  <%else%>
+						  	<td></td>
+						  <%end%>
+						</tr>
+					<%end%>																											
+				</table> <!-- Table Scores -->
+				
+
+			</div>	<!-- Module Content -->	
+		</div>	<!-- Module -->	
+</section>
+ <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,700italic,700,400italic' rel='stylesheet' type='text/css'>
+    
+    <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="js/js.js" type="text/javascript"></script>
+        <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="../owl-carousel/owl.carousel.css">
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="../owl-carousel/owl.theme.css">
+    <!-- Include js plugin -->
+    <script src="owl-carousel/owl.carousel.js"></script>
+    <script src="../js/countdown.js" type="text/javascript" charset="utf-8"></script>
+   
+<script type="application/javascript">
+	$(document).ready(function(e) {
+       	$("#edit").click(function(e)
+		{
+			$(this).parents("tr").find('div,#edit').addClass("hide").removeClass("show");
+			$(this).parents("tr").find('input,#update').addClass("show").removeClass("hide");
+			
+		});
+		$("#update").click(function(e)
+		{
+			$(this).parents("tr").find('div,#edit').addClass("show").removeClass("hide");
+			$(this).parents("tr").find('input,#update').addClass("hide").removeClass("show");
+		});
+    });
+		
+</script>
+
+    

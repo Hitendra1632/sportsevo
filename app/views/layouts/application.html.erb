@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SportsEvo</title>
+
+    
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+</head>
+
+</head>
+<body>
+	<header>
+        <nav>
+            <div class="logo">
+                <a href="/"><img src="../img/logo.png" alt="Sport Evo"></a>
+            </div>
+
+            <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/about">About</a>
+                    <ul>
+                        <li><a href="/current_event">Current Event</a></li> 
+                        <li><a href="/cheif_guest">Cheif Guest</a></li> 
+                        <li><a href="/sponsors">Sponsors</a></li>
+                        <li><a href="/organizers">Organizers</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>               
+                </li>
+                <li><a href="/teams">Teams</a>  
+                </li>
+                <%team_id=team_registered%>
+                <%if team_id.present? %> 
+                     <li><%=link_to "My Team",team_information_path(team_id)%></li>
+                 <%else%>
+                    <li><a href="/team_register">Register</a>
+                        <ul>
+                            <li><a href="/team_register">Team</a></li>
+                            
+                        </ul>               
+                    </li>
+                <%end%>
+                <li><a href="/contact">Contact</a></li>
+                <% if user_signed_in? %> 
+             
+            
+                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete%> </li>
+                <% else %>
+                    <li><a href="/users/sign_in">Login</a></li>
+                <%end%>
+
+            </ul>
+        </nav>
+
+        <div class="nav-mobile">
+            <ul class="nav-mobile-menu">
+                <li class="active"><a href="/">Home</a></li>         
+                <li><div>About <i class="fa fa-chevron-right"></i></div>
+                    <ul>
+                        <li><a href="/current_event">Current Event</a></li> 
+                        <li><a href="/cheif_guest">Chief Guest</a></li> 
+                        <li><a href="/sponsors">Sponsors</a></li>
+                        <li><a href="/organizers">Organizers</a></li>
+                        <li><a href="/about">About us</a></li>
+                    </ul>               
+                </li>
+                <li><a href="/teams">Teams</a></li>
+                <%team_id=team_registered%>
+                <%if team_id.present? %> 
+                     <li><a href="/team_information?id=<%=team_id%>">My Team</a></li>
+                 <%else%>
+                    <li><div>Register<i class="fa fa-chevron-right"></i></div>
+                         <ul>
+                            <li><a href="/team_register">Team</a></li>
+                            
+                        </ul>   
+                    </li>
+                <%end%>
+            
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/users/sign_in">Login</a></li>
+            </ul>   
+            <ul class="button-menu">            
+                <li>
+                    <i class="fa fa-bars"></i>
+                </li>
+            </ul>                               
+        </div>
+
+    
+
+    </header>
+
+
+<%= yield %>
+                <footer class="clearfix bg-grey">
+        <div class="m-02">
+            <div class="module-content">
+                <h4>Home</h4>
+                <ul> 
+                    <li><a href="/teams">Teams</a></li>                  
+                    <li><a href="/team_register">Register your Team</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-02">
+            <div class="module-content">
+                <h4>About</h4>                  
+                <ul>
+                    <li><a href="/current_event">Current Event</a></li>
+                    <li><a href="/cheif_guest">Cheif Guest</a></li>
+                    <li><a href="/sponsors">Sponsors</a></li>
+                </ul>               
+            </div>
+        </div>
+        <div class="m-02">
+            <div class="module-content">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+      
+        <div class="m-03 bg-grey">
+            <div class="module-content">
+                <h4>Social</h4>
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/sportsevo"><i class="fa fa-facebook"></i></a></li>
+                  <!--  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>  -->
+                </ul>
+            </div>
+        </div>
+        <div class="m-03 bg-gray">
+            <div class="module-content">
+                <div class="subscribe subscribe-form">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i>Mathura</li>
+                        <li><i class="fa fa-phone"></i>+91 8695398008</li>
+                        <li><i class="fa fa-envelope"></i>hitendra1632@gmail.com</li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

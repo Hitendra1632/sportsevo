@@ -1,0 +1,24 @@
+<%=form_tag new_team_path,:method => :get do %>
+  <fieldset>
+    <p><%= text_field_tag :captan_name ,params[:captan_name],:placeholder => "Captan name" %></p>
+    <p><%= text_field_tag :captan_email ,params[:captan_email],:placeholder => "email" %></p>
+    <p><%= text_field_tag :captan_phone ,params[:captan_phone],:placeholder => "Phone Number" %></p>
+    <p><%= text_field_tag :captan_photo ,params[:capton_photo],:placeholder => "Photo" %></p>
+    <p><%= text_field_tag :player1_name ,params[:player1_name],:placeholder => "First player name" %></p>
+    <p><%= text_field_tag :player2_name ,params[:player2_name],:placeholder => "Second player name" %></p>
+    <p><%= text_field_tag :player3_name ,params[:player3_name],:placeholder => "Thrid player name" %></p>
+    <p><%= text_field_tag :player4_name ,params[:player4_name],:placeholder => "Fourth player name" %></p>
+    <p><%= text_field_tag :player5_name ,params[:player5_name],:placeholder => "Fifth player name" %></p>
+    <p><%= text_field_tag :player6_name ,params[:player6_name],:placeholder => "Sixth player name" %></p>
+    <p><%= text_field_tag :player7_name ,params[:player7_name],:placeholder => "Seventh palyer name" %></p>
+    <p><%= text_field_tag :player8_name ,params[:player8_name],:placeholder => "Eighth player name" %></p>
+    <p><%= text_field_tag :player9_name ,params[:player9_name],:placeholder => "Ninth player name" %></p>
+    <p><%= text_field_tag :player10_name ,params[:player10_name],:placeholder => "Tenth player name" %></p>
+    <p><%= text_field_tag :player11_name ,params[:player11_name],:placeholder => "Eleventh player name" %></p>
+    <p><%= text_field_tag :player12_name ,params[:player12_name],:placeholder => "Twelfth player name" %></p>
+    <p><%= text_field_tag :player13_name ,params[:player13_name],:placeholder => "Thirteenth player name" %></p>
+    <p><%= text_field_tag :player14_name ,params[:player14_name],:placeholder => "Fourteenth player name" %></p>
+    <%= submit_tag "Submit"  %>
+
+  </fieldset>
+<% end %>

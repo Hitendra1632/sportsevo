@@ -1,0 +1,63 @@
+
+                        <div class="col-md-12"> 
+                            <!-- Content - Group A-->
+                            <div class="panel-box">
+                                <div class="titles">
+                                    <h4>Group A.</h4>
+                                </div>
+                                <!-- Item club -->  
+                                <div class="row clubs-teams">
+                                    <!-- Item clubs --> 
+                                    <div class="col-sx-12 col-sm-6 col-md-4">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/1.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">Team 1</a></h4>
+                                                <p>Lorem ipsum dolor sit amet,ectetur adipiscing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs --> 
+
+                                    <!-- Item clubs --> 
+                                    <div class="col-sx-12 col-sm-6 col-md-4">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/2.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">Team 2</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, ctetur adipiscing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs --> 
+
+                                    <!-- Item clubs --> 
+                                    <div class="col-sx-12 col-sm-6 col-md-4">
+                                        <div class="item-clubs">
+                                            <div class="img-clubs">
+                                                <img src="img/clubs-team/3.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="info-clubs">
+                                                <h4><a href="#">Team 3</a></h4>
+                                                <p>Lorem ipsum dolor sit amet, coetur adipiscing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Item clubs --> 
+
+                                    
+                                    
+                                  
+                                </div>
+                                <!-- End Item club -->
+                            </div>  
+                            <!-- End Content - Group A-->
+
+                           
+
+                            
+                        </div>
